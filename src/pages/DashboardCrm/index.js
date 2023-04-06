@@ -9,7 +9,7 @@ const DashboardCrm = () => {
     <React.Fragment>
       <div className="page-content">
         <Container fluid>
-          <BreadCrumb title="CRM" pageTitle="Dashboards" />
+          {/* <BreadCrumb title="CRM" pageTitle="Dashboards" /> */}
         </Container>
       </div>
     </React.Fragment>

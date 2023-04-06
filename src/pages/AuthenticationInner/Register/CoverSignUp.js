@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Card, Col, Container, Row } from "reactstrap";
+import { Button, Card, Col, Container, Row } from "reactstrap";
 
 import AuthSlider from "../authCarousel";
 import { Formik, Form, Field } from "formik";
@@ -64,10 +64,11 @@ const CoverSignUp = (props) => {
 
                     <Col lg={6}>
                       <div className="p-lg-5 p-4">
-                        <div>
-                          <h5 className="text-primary">Register Account</h5>
+                        <div className="text-center">
+                          <h5>ADD SCHOOL</h5>
                           <p className="text-muted">
-                            Get your RTMS account now.
+                            It is a long established fact that a reader readable
+                            content of a page when looking at its layout. <i className="fas fa-heart"></i>
                           </p>
                         </div>
 
@@ -90,17 +91,22 @@ const CoverSignUp = (props) => {
                           >
                             {({ errors, touched }) => (
                               <Form className="av-tooltip tooltip-label-bottom">
-                                <div className="mb-3">
-                                  <label
+                                <div className="mb-2">
+                                  {/* <label
                                     htmlFor="useremail"
                                     className="form-label"
                                   >
                                     Email <span className="text-danger">*</span>
-                                  </label>
+                                  </label> */}
                                   <Field
                                     className="form-control"
                                     name="email"
+                                    placeholder="Enter Email ID:-"
                                     validate={validateEmail()}
+                                    style={{
+                                      background: "#EEEEEE",
+                                      borderRadius: "10px",
+                                    }}
                                   />
                                   {errors.email && touched.email && (
                                     <div className="invalid-feedback d-block">
@@ -108,43 +114,42 @@ const CoverSignUp = (props) => {
                                     </div>
                                   )}
                                 </div>
-                                <div className="mb-3">
-                                  <label
-                                    htmlFor="first_name"
-                                    className="form-label"
+                                <div>
+                                  <Button
+                                    className="float-end mb-1"
+                                    style={{
+                                      background: "#7A7A7A",
+                                      border: "#7A7A7A",
+                                    }}
                                   >
-                                    Username
-                                  </label>
-                                  <Field
-                                    className="form-control"
-                                    name="first_name"
-                                  />
-                                  {errors.first_name && touched.first_name && (
-                                    <div className="invalid-feedback d-block">
-                                      {errors.first_name}
-                                    </div>
-                                  )}
+                                    Generate Password
+                                  </Button>
                                 </div>
 
                                 <div className="mb-3">
-                                  <label
+                                  {/* <label
                                     className="form-label"
                                     htmlFor="password-input"
                                   >
                                     Password{" "}
                                     <span className="text-danger">*</span>
-                                  </label>
+                                  </label> */}
                                   <div className="position-relative auth-pass-inputgroup">
                                     <Field
                                       className="form-control"
                                       type={showPassword ? "text" : "password"}
                                       name="password"
+                                      placeholder="Enter Password:-"
                                       validate={validatePassword()}
+                                      style={{
+                                        background: "#EEEEEE",
+                                        borderRadius: "10px",
+                                      }}
                                     />
 
                                     <div
                                       className={[
-                                        "btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted",
+                                        "btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted pt-5",
                                       ].join(" ")}
                                       onClick={() => {
                                         setShowPassword((prev) => !prev);
@@ -169,41 +174,141 @@ const CoverSignUp = (props) => {
                                   </div>
                                 </div>
                                 <div className="mb-3">
-                                  <label
-                                    htmlFor="mobile"
-                                    className="form-label"
-                                  >
-                                    Mobile
-                                  </label>
-                                  <Field
-                                    className="form-control"
-                                    name="mobile"
-                                  />
-                                  {errors.mobile && touched.mobile && (
-                                    <div className="invalid-feedback d-block">
-                                      {errors.mobile}
-                                    </div>
-                                  )}
-                                </div>
-                                <div className="mb-4">
-                                  <p className="mb-0 fs-12 text-muted fst-italic">
-                                    By registering you agree to the RTMS{" "}
-                                    <Link
-                                      to="#"
-                                      className="text-primary text-decoration-underline fst-normal fw-medium"
-                                    >
-                                      Terms of Use
-                                    </Link>
-                                  </p>
+                                  <Row>
+                                    <Col>
+                                      <Field
+                                        className="form-control float-start"
+                                        name="firstName"
+                                        placeholder="First Name:-"
+                                        style={{
+                                          background: "#EEEEEE",
+                                          borderRadius: "10px",
+                                        }}
+                                      />
+                                    </Col>
+                                    <Col>
+                                      <Field
+                                        className="form-control float-end"
+                                        name="lastName"
+                                        placeholder="Last Name:-"
+                                        style={{
+                                          background: "#EEEEEE",
+                                          borderRadius: "10px",
+                                        }}
+                                      />
+                                    </Col>
+                                  </Row>
                                 </div>
 
-                                <div className="mt-4">
-                                  <button
-                                    className="btn btn-success w-100"
-                                    type="submit"
+                                <div className="mb-3">
+                                  <Field
+                                    className="form-control"
+                                    name="schoolName"
+                                    placeholder="School Name:-"
+                                    style={{
+                                      background: "#EEEEEE",
+                                      borderRadius: "10px",
+                                    }}
+                                  />
+                                </div>
+
+                                <div className="mb-3">
+                                  <Row>
+                                    <Col>
+                                      <Field
+                                        className="form-control float-start"
+                                        name="contact"
+                                        placeholder="Contact:-"
+                                        style={{
+                                          background: "#EEEEEE",
+                                          borderRadius: "10px",
+                                        }}
+                                      />
+                                    </Col>
+                                    <Col>
+                                      <Field
+                                        className="form-control float-end"
+                                        name="contactNo"
+                                        placeholder="Contact No:-"
+                                        style={{
+                                          background: "#EEEEEE",
+                                          borderRadius: "10px",
+                                        }}
+                                      />
+                                    </Col>
+                                  </Row>
+                                </div>
+
+                                <div className="mb-3">
+                                  <Field
+                                    className="form-control"
+                                    name="address"
+                                    placeholder="Address:-"
+                                    style={{
+                                      background: "#EEEEEE",
+                                      borderRadius: "10px",
+                                    }}
+                                  />
+                                </div>
+
+                                <div className="mb-3">
+                                  <Field
+                                    as="select"
+                                    className="form-control text-muted"
+                                    name="city"
+                                    style={{
+                                      background: "#EEEEEE",
+                                      borderRadius: "10px",
+                                    }}
                                   >
-                                    Sign Up
-                                  </button>
+                                    <option value="" className="">Select City:-</option>
+                                    <option value="delhi">Delhi</option>
+                                    <option value="hyderabad">Hyderabad</option>
+                                  </Field>
+                                </div>
+
+                                <div className="mb-5">
+                                  <Row>
+                                    <Col>
+                                      <Field
+                                        className="form-control float-start"
+                                        name="state"
+                                        placeholder="State:-"
+                                        style={{
+                                          background: "#EEEEEE",
+                                          borderRadius: "10px",
+                                        }}
+                                      />
+                                    </Col>
+                                    <Col>
+                                      <Field
+                                        className="form-control float-end"
+                                        name="country"
+                                        placeholder="Country:-"
+                                        style={{
+                                          background: "#EEEEEE",
+                                          borderRadius: "10px",
+                                        }}
+                                      />
+                                    </Col>
+                                  </Row>
+                                </div>
+
+                                <div className="text-center">
+                                  <Button
+                                    // color="success"
+                                    // className="w-100"
+                                    type="submit"
+                                    style={{
+                                      background: "#7A7A7A",
+                                      border: "#7A7A7A",
+                                      width: "230px",
+                                      height: "40px",
+                                      borderRadius: "10px",
+                                    }}
+                                  >
+                                    Add School
+                                  </Button>
                                 </div>
 
                                 {/* <div className="mt-4 text-center">
@@ -245,7 +350,7 @@ const CoverSignUp = (props) => {
                           </Formik>
                         </div>
 
-                        <div className="mt-5 text-center">
+                        {/* <div className="mt-5 text-center">
                           <p className="mb-0">
                             Already have an account ?{" "}
                             <Link
@@ -256,7 +361,7 @@ const CoverSignUp = (props) => {
                               Signin
                             </Link>{" "}
                           </p>
-                        </div>
+                        </div> */}
                       </div>
                     </Col>
                   </Row>
@@ -266,7 +371,7 @@ const CoverSignUp = (props) => {
           </Container>
         </div>
 
-        <footer className="footer">
+        {/* <footer className="footer">
           <Container>
             <div className="row">
               <div className="col-lg-12">
@@ -279,7 +384,7 @@ const CoverSignUp = (props) => {
               </div>
             </div>
           </Container>
-        </footer>
+        </footer> */}
       </div>
     </React.Fragment>
   );

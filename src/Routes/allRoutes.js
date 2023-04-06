@@ -77,7 +77,7 @@ const publicRoutes = [
   { path: "/logout", component: Logout },
   { path: "/login", component: CoverSignIn },
   { path: "/forgot-password", component: ForgetPasswordPage },
-  { path: "/register", component: Register },
+  { path: "/register", component: CoverSignUp },
 
   //AuthenticationInner pages
   { path: "/auth-signin-basic", component: BasicSignIn },

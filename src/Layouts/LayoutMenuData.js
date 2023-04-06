@@ -43,74 +43,74 @@ const Navdata = () => {
       id: "dashboard",
       label: "Dashboards",
       icon: "ri-dashboard-2-line",
-      link: "/#",
+      link: "/",
       stateVariables: isDashboard,
-      click: function (e) {
-        e.preventDefault();
-        setIsDashboard(!isDashboard);
-        setIscurrentState("Dashboard");
-        updateIconSidebar(e);
-      },
-      subItems: [
-        {
-          id: "crm",
-          label: "CRM",
-          link: "/dashboard",
-          parentId: "dashboard",
-        },
-      ],
+      // click: function (e) {
+      //   e.preventDefault();
+      //   setIsDashboard(!isDashboard);
+      //   setIscurrentState("Dashboard");
+      //   updateIconSidebar(e);
+      // },
+      // subItems: [
+      //   {
+      //     id: "crm",
+      //     label: "CRM",
+      //     link: "/dashboard",
+      //     parentId: "dashboard",
+      //   },
+      // ],
     },
-    {
-      id: "settings",
-      label: "Settings",
-      icon: "ri-settings-2-line",
-      link: "/#",
-      stateVariables: isSettings,
-      click: function (e) {
-        e.preventDefault();
-        setIsSettings(!isSettings);
-        setIscurrentState("Settings");
-        updateIconSidebar(e);
-      },
-      subItems: [
-        {
-          id: "company",
-          label: "Companies",
-          link: "/companies",
-          parentId: "settings",
-        },
-        {
-          id: "users",
-          label: "Users",
-          link: "/users",
-          parentId: "settings",
-        },
-        {
-          id: "groups",
-          label: "Groups",
-          link: "/groups",
-          parentId: "settings",
-        },
-        {
-          id: "servers",
-          label: "Servers",
-          link: "/servers",
-          parentId: "settings",
-        },
-        {
-          id: "locations",
-          label: "Locations",
-          link: "/locations",
-          parentId: "settings",
-        },
-        {
-          id: "devices",
-          label: "Devices",
-          link: "/devices",
-          parentId: "settings",
-        },
-      ],
-    },
+    // {
+    //   id: "settings",
+    //   label: "Settings",
+    //   icon: "ri-settings-2-line",
+    //   link: "/#",
+    //   stateVariables: isSettings,
+    //   click: function (e) {
+    //     e.preventDefault();
+    //     setIsSettings(!isSettings);
+    //     setIscurrentState("Settings");
+    //     updateIconSidebar(e);
+    //   },
+    //   subItems: [
+    //     {
+    //       id: "company",
+    //       label: "Companies",
+    //       link: "/companies",
+    //       parentId: "settings",
+    //     },
+    //     {
+    //       id: "users",
+    //       label: "Users",
+    //       link: "/users",
+    //       parentId: "settings",
+    //     },
+    //     {
+    //       id: "groups",
+    //       label: "Groups",
+    //       link: "/groups",
+    //       parentId: "settings",
+    //     },
+    //     {
+    //       id: "servers",
+    //       label: "Servers",
+    //       link: "/servers",
+    //       parentId: "settings",
+    //     },
+    //     {
+    //       id: "locations",
+    //       label: "Locations",
+    //       link: "/locations",
+    //       parentId: "settings",
+    //     },
+    //     {
+    //       id: "devices",
+    //       label: "Devices",
+    //       link: "/devices",
+    //       parentId: "settings",
+    //     },
+    //   ],
+    // },
   ];
   return <React.Fragment>{menuItems}</React.Fragment>;
 };

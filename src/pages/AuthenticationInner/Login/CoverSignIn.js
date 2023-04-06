@@ -62,11 +62,12 @@ const CoverSignIn = (props) => {
                     <AuthSlider />
 
                     <Col lg={6}>
-                      <div className="p-lg-5 p-4">
-                        <div>
-                          <h5 className="text-primary">Welcome Back !</h5>
+                      <div className="p-lg-5 p-5">
+                        <div className="text-center mt-5 mb-5">
+                          <h5>LOGIN</h5>
                           <p className="text-muted">
-                            Sign in to continue to RTMS.
+                            It is a long established fact that a reader readable
+                            content of a page when looking at its layout.
                           </p>
                         </div>
 
@@ -82,14 +83,16 @@ const CoverSignIn = (props) => {
                           >
                             {({ errors, touched }) => (
                               <Form className="av-tooltip tooltip-label-bottom">
-                                <div className="mb-3">
-                                  <Label htmlFor="email" className="form-label">
+                                <div className="mb-4">
+                                  {/* <Label htmlFor="email" className="form-label">
                                     Username
-                                  </Label>
+                                  </Label> */}
                                   <Field
                                     className="form-control"
                                     name="email"
+                                    placeholder="Email ID / Phone Number :-"
                                     validate={validateEmail()}
+                                    style={{background: "#EEEEEE", borderRadius: "10px"}}
                                   />
                                   {errors.email && touched.email && (
                                     <div className="invalid-feedback d-block">
@@ -99,31 +102,25 @@ const CoverSignIn = (props) => {
                                 </div>
 
                                 <div className="mb-3">
-                                  <div className="float-end">
-                                    <Link
-                                      to="/auth-pass-reset-cover"
-                                      className="text-muted"
-                                    >
-                                      Forgot password?
-                                    </Link>
-                                  </div>
-                                  <Label
+                                  {/* <Label
                                     className="form-label"
                                     htmlFor="password-input"
                                   >
                                     Password
-                                  </Label>
+                                  </Label> */}
                                   <div className="position-relative auth-pass-inputgroup mb-3">
                                     <Field
                                       className="form-control"
                                       type={showPassword ? "text" : "password"}
                                       name="password"
+                                      placeholder="Enter Password:-"
                                       validate={validatePassword()}
+                                      style={{background: "#EEEEEE", borderRadius: "10px"}}
                                     />
 
                                     <div
                                       className={[
-                                        "btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted",
+                                        "btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted pt-2",
                                       ].join(" ")}
                                       onClick={(e) => {
                                         setShowPassword((prev) => !prev);
@@ -147,37 +144,47 @@ const CoverSignIn = (props) => {
                                     )}
                                   </div>
                                 </div>
-                                <div className="mb-3">
+                                {/* <div className="mb-3">
                                   <ReCAPTCHA
                                     sitekey="6Leh5cQgAAAAAHpzzpmfjLfoKujP0xGYiNEfrQoR"
                                     onChange={(e) => {
                                       console.log("Captcha", e);
                                     }}
                                   />
-                                </div>
+                                </div> */}
 
-                                <div className="form-check">
+                                <div className="form-check mb-5">
                                   <Input
                                     className="form-check-input"
                                     type="checkbox"
                                     value=""
                                     id="auth-remember-check"
+                                    style={{background: "#D9D9D9"}}
                                   />
                                   <Label
-                                    className="form-check-label"
+                                    className="form-check-label text-muted"
                                     htmlFor="auth-remember-check"
                                   >
                                     Remember me
                                   </Label>
+                                  <div className="float-end">
+                                    <Link
+                                      to="/auth-pass-reset-cover"
+                                      className="text-muted"
+                                    >
+                                      Forgot password?
+                                    </Link>
+                                  </div>
                                 </div>
 
-                                <div className="mt-4">
+                                <div className="mt-4 text-center mb-5">
                                   <Button
-                                    color="success"
-                                    className="w-100"
+                                    // color="success"
+                                    // className="w-100"
                                     type="submit"
+                                    style={{background: "#7A7A7A", border: "#7A7A7A", width: "230px", height: "40px", borderRadius: "10px"}}
                                   >
-                                    Sign In
+                                    Login
                                   </Button>
                                 </div>
 
@@ -217,7 +224,7 @@ const CoverSignIn = (props) => {
                           </Formik>
                         </div>
 
-                        <div className="mt-5 text-center">
+                        {/* <div className="mt-5 text-center">
                           <p className="mb-0">
                             Don't have an account ?{" "}
                             <a
@@ -228,7 +235,7 @@ const CoverSignIn = (props) => {
                               Signup
                             </a>{" "}
                           </p>
-                        </div>
+                        </div> */}
                       </div>
                     </Col>
                   </Row>
@@ -238,20 +245,19 @@ const CoverSignIn = (props) => {
           </Container>
         </div>
 
-        <footer className="footer">
+        {/* <footer className="footer">
           <Container>
             <Row>
               <Col lg={12}>
                 <div className="text-center">
                   <p className="mb-0">
-                    &copy; {new Date().getFullYear()} Velzon. Crafted with{" "}
-                    <i className="mdi mdi-heart text-danger"></i> by Themesbrand
+                    &copy; {new Date().getFullYear()} Velzon.
                   </p>
                 </div>
               </Col>
             </Row>
           </Container>
-        </footer>
+        </footer> */}
       </div>
     </React.Fragment>
   );

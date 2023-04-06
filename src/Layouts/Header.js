@@ -57,10 +57,10 @@ const Header = ({ onChangeLayoutMode, layoutModeType, headerClass }) => {
         <React.Fragment>
             <header id="page-topbar" className={headerClass}>
                 <div className="layout-width">
-                    <div className="navbar-header bg-info">
+                    <div className="navbar-header">
                         <div className="d-flex">
 
-                            <div className="navbar-brand-box horizontal-logo">
+                            {/* <div className="navbar-brand-box horizontal-logo">
                                 <Link to="/" className="logo logo-dark">
                                     <span className="logo-sm">
                                         <img src={logoSm} alt="" height="22" />
@@ -78,7 +78,7 @@ const Header = ({ onChangeLayoutMode, layoutModeType, headerClass }) => {
                                         <img src={logoLight} alt="" height="17" />
                                     </span>
                                 </Link>
-                            </div>
+                            </div> */}
 
                             <button
                                 onClick={toogleMenuBtn}
@@ -93,12 +93,12 @@ const Header = ({ onChangeLayoutMode, layoutModeType, headerClass }) => {
                             </button>
 
 
-                            <SearchOption />
+                            {/* <SearchOption /> */}
                         </div>
 
-                        <div className="d-flex align-items-center">
+                        {/* <div className="d-flex align-items-center"> */}
 
-                            <Dropdown isOpen={search} toggle={toogleSearch} className="d-md-none topbar-head-dropdown header-item">
+                            {/* <Dropdown isOpen={search} toggle={toogleSearch} className="d-md-none topbar-head-dropdown header-item">
                                 <DropdownToggle type="button" tag="button" className="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle">
                                     <i className="bx bx-search fs-22"></i>
                                 </DropdownToggle>
@@ -114,7 +114,7 @@ const Header = ({ onChangeLayoutMode, layoutModeType, headerClass }) => {
                                         </div>
                                     </Form>
                                 </DropdownMenu>
-                            </Dropdown>
+                            </Dropdown> */}
 
                             {/* LanguageDropdown */}
                             {/* <LanguageDropdown /> */}
@@ -123,20 +123,20 @@ const Header = ({ onChangeLayoutMode, layoutModeType, headerClass }) => {
                             {/* <WebAppsDropdown /> */}
 
                             {/* FullScreenDropdown */}
-                            <FullScreenDropdown />
+                            {/* <FullScreenDropdown /> */}
 
                             {/* Dark/Light Mode set */}
-                            <LightDark
+                            {/* <LightDark
                                 layoutMode={layoutModeType}
                                 onChangeLayoutMode={onChangeLayoutMode}
-                            />
+                            /> */}
 
                             {/* NotificationDropdown */}
-                            <NotificationDropdown />
+                            {/* <NotificationDropdown /> */}
 
                             {/* ProfileDropdown */}
-                            <ProfileDropdown />
-                        </div>
+                            {/* <ProfileDropdown /> */}
+                        {/* </div> */}
                     </div>
                 </div>
             </header>

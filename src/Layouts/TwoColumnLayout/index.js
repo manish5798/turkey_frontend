@@ -136,12 +136,12 @@ const TwoColumnLayout = (props) => {
             {isMenu === "twocolumn" ?
                 <div id="scrollbar">
                     <Container fluid>
-                        <div id="two-column-menu">
+                        <div id="two-column-menu" style={{color: "#fff"}}>
                             <SimpleBar className="twocolumn-iconview">
-                                <Link to="#" className="logo">
+                                {/* <Link to="#" className="logo">
                                     <img src={logoSm} alt="" height="22" />
-                                </Link>
-                                {(navData || []).map((item, key) => (
+                                </Link> */}
+                                {/* {(navData || []).map((item, key) => (
                                     <React.Fragment key={key}>
                                         {item.icon && (
                                             item.subItems ? (
@@ -170,7 +170,7 @@ const TwoColumnLayout = (props) => {
                                             )
                                         )}
                                     </React.Fragment>
-                                ))}
+                                ))} */}
 
                             </SimpleBar>
                         </div>
@@ -261,7 +261,7 @@ const TwoColumnLayout = (props) => {
                 :
                 <SimpleBar id="scrollbar" className="h-100">
                     <Container fluid>
-                        <div id="two-column-menu"></div>
+                        <div id="two-column-menu" style={{color: "#fff"}}></div>
                         <ul className="navbar-nav" id="navbar-nav">
                             <VerticalLayout />
                         </ul>
