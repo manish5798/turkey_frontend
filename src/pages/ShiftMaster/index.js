@@ -10,14 +10,13 @@ import {
 import BreadCrumb from "../../Components/Common/BreadCrumb";
 import avatar1 from "../../assets/images/users/user-dummy-img.jpg";
 import { Plus, PlusCircle } from "react-bootstrap-icons";
-import SuperAdminTable from "./SuperAdminTable";
 import { Colxx } from "../../Components/Common/CustomBootstrap";
-import data from "./SuperAdminData.js";
-import AddSuperAdminTable from "./AddSuperAdminTable";
+import data from "./ShiftMasterData.js";
 import apiAuth from "../../helpers/ApiAuth";
 import NotificationManager from "../../Components/Common/NotificationManager";
+import ShiftMasterTable from "./ShiftMasterTable";
 
-const DashboardCrm = (props) => {
+const ShiftMaster = (props) => {
   document.title = "CRM Dashboard";
 
   const [createModal, setCreateModal] = useState(false);
@@ -79,7 +78,7 @@ const DashboardCrm = (props) => {
 
           <div>
             <Row>
-              <Colxx lg="9">
+              <Colxx lg="12">
                 <div
                   style={{
                     display: "flex",
@@ -105,7 +104,7 @@ const DashboardCrm = (props) => {
                   </button>
                 </div>
                 <Card className="rounded-4 mt-5 w-100 h-100">
-                  <SuperAdminTable
+                  <ShiftMasterTable
                     customers={data}
                     // getCustomer={getCustomer}
                     deleteCustomer={deleteCustomer}
@@ -113,18 +112,18 @@ const DashboardCrm = (props) => {
                   />
                 </Card>
               </Colxx>
-              <Colxx lg="3">
+              {/* <Colxx lg="3">
               <h3 style={{ color: "#7B7B7B" }}>*Customer Activities</h3>
                 <Card className="p-3 rounded-4 w-100 h-100 mt-5" style={{background: "#7A7A7A"}}>
 
                 </Card>
-              </Colxx>
+              </Colxx> */}
             </Row>
           </div>
         </Container>
       </div>
 
-      <Modal
+      {/* <Modal
         id="signupModals"
         tabIndex="-1"
         className="modal-lg"
@@ -142,16 +141,16 @@ const DashboardCrm = (props) => {
           Add Ticket
         </ModalHeader>
         <ModalBody>
-          <AddSuperAdminTable
+          <AddShiftMaster
             closeAddPopup={() => {
               setCreateModal(false);
               // getTickets();
             }}
           />
         </ModalBody>
-      </Modal>
+      </Modal> */}
     </React.Fragment>
   );
 };
 
-export default DashboardCrm;
+export default ShiftMaster;

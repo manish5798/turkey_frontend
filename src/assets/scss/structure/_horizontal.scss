@@ -60,13 +60,13 @@
 
                     &:hover,
                     &.active {
-                        color: $topnav-item-color-active;
+                        color: white;
                     }
                 }
             }
 
             .nav-link {
-                color: $topnav-item-color;
+                color: white;
                 padding: $horizontal-menu-item-padding-y $horizontal-menu-item-padding-x;
 
                 i {
@@ -74,25 +74,25 @@
                 }
 
                 &.active {
-                    color: $topnav-item-color-active;
+                    color: white;
                   }
 
                 &[data-bs-toggle=collapse][aria-expanded=true] {
                     color: $topnav-item-color-active;
 
                     .icon-dual {
-                        color: $topnav-item-color-active;
+                        color: white;
                         fill: rgba($primary, 0.10);
                     }
 
                     &:after {
-                        color: $topnav-item-color-active;
+                        color: white;
                     }
                 }
 
                 &:hover {
                     .icon-dual {
-                        color: $topnav-item-color-active;
+                        color: white;
                         fill: rgba($primary, 0.10);
                     }
                 }
@@ -134,15 +134,15 @@
 
             &:hover {
                 >.nav-link {
-                    color: $topnav-item-color-active;
+                    color: white;
 
                     .icon-dual {
-                        color: $topnav-item-color-active;
+                        color: white;
                         fill: rgba($primary, 0.10);
                     }
 
                     &:after {
-                        color: $topnav-item-color-active;
+                        color: white;
                     }
                 }
 

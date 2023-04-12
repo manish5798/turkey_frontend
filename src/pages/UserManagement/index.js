@@ -10,14 +10,14 @@ import {
 import BreadCrumb from "../../Components/Common/BreadCrumb";
 import avatar1 from "../../assets/images/users/user-dummy-img.jpg";
 import { Plus, PlusCircle } from "react-bootstrap-icons";
-import SuperAdminTable from "./SuperAdminTable";
 import { Colxx } from "../../Components/Common/CustomBootstrap";
-import data from "./SuperAdminData.js";
-import AddSuperAdminTable from "./AddSuperAdminTable";
+import data from "./UserData.js";
 import apiAuth from "../../helpers/ApiAuth";
 import NotificationManager from "../../Components/Common/NotificationManager";
+import UserTable from "./UserTable";
+import AddUser from "./AddUser";
 
-const DashboardCrm = (props) => {
+const UserManagement = (props) => {
   document.title = "CRM Dashboard";
 
   const [createModal, setCreateModal] = useState(false);
@@ -105,7 +105,7 @@ const DashboardCrm = (props) => {
                   </button>
                 </div>
                 <Card className="rounded-4 mt-5 w-100 h-100">
-                  <SuperAdminTable
+                  <UserTable
                     customers={data}
                     // getCustomer={getCustomer}
                     deleteCustomer={deleteCustomer}
@@ -142,7 +142,7 @@ const DashboardCrm = (props) => {
           Add Ticket
         </ModalHeader>
         <ModalBody>
-          <AddSuperAdminTable
+          <AddUser
             closeAddPopup={() => {
               setCreateModal(false);
               // getTickets();
@@ -154,4 +154,4 @@ const DashboardCrm = (props) => {
   );
 };
 
-export default DashboardCrm;
+export default UserManagement;

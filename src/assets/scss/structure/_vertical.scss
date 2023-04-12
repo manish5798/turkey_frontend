@@ -47,11 +47,11 @@
       font-family: $vertical-menu-item-font-family;
 
       &.active {
-        color: $vertical-menu-item-active-color;
+        color: white;
       }
 
       &:hover {
-        color: $vertical-menu-item-hover-color;
+        color: white;
       }
 
       i {
@@ -764,7 +764,7 @@
 
     .navbar-nav {
       .nav-link {
-        color: $vertical-menu-item-color-dark;
+        color: white;
 
         &.active {
           color: $vertical-menu-item-active-color-dark;

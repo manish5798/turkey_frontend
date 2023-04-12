@@ -41,9 +41,9 @@ const Navdata = () => {
   const menuItems = [
     {
       id: "dashboard",
-      label: "Dashboards",
+      label: "Dashboard",
       icon: "ri-dashboard-2-line",
-      link: "/",
+      link: "/dashboard",
       stateVariables: isDashboard,
       // click: function (e) {
       //   e.preventDefault();
@@ -60,6 +60,13 @@ const Navdata = () => {
       //   },
       // ],
     },
+
+    {
+      id: "customer",
+      label: "Customer",
+      icon: "ri-dashboard-2-line",
+      link: "/customer",
+    }
     // {
     //   id: "settings",
     //   label: "Settings",

@@ -212,7 +212,7 @@
           .nav-link {
             &:hover,
             &.active {
-              color: $twocolumn-menu-item-active-color-dark;
+              color: white;
               &::before {
                 background-color: $twocolumn-menu-item-active-color-dark !important;
               }
@@ -226,7 +226,7 @@
               background-color: $twocolumn-menu-item-active-color-dark;
             }
             &::after {
-              color: $twocolumn-menu-item-active-color-dark !important;
+              color: white !important;
             }
           }
         }
@@ -242,10 +242,10 @@
       background-color: $twocolumn-menu-iconview-bg-dark;
 
       .nav-icon {
-        color: $twocolumn-menu-item-color-gradient;
+        color: white;
 
         &.active {
-          color: $twocolumn-menu-item-active-color-dark;
+          color:white;
           background-color: $twocolumn-menu-item-active-bg-dark;
         }
       }
@@ -268,7 +268,7 @@
       .navbar-nav {
         .nav-sm {
           .nav-link {
-            color: $twocolumn-menu-item-color-gradient;
+            color: white;
           }
         }
       }
@@ -280,7 +280,7 @@
           .nav-link {
             &:hover,
             &.active {
-              color: $twocolumn-menu-item-active-color-dark;
+              color: white;
 
               &::before {
                 background-color: $twocolumn-menu-item-active-color-dark !important;
@@ -291,14 +291,14 @@
 
         .nav-link {
           &[data-bs-toggle="collapse"][aria-expanded="true"] {
-            color: $twocolumn-menu-item-active-color-dark;
+            color: white;
 
             &:before {
               background-color: $twocolumn-menu-item-active-color-dark;
             }
 
             &::after {
-              color: $twocolumn-menu-item-active-color-dark !important;
+              color: white !important;
             }
           }
         }

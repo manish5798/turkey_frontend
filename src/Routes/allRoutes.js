@@ -46,6 +46,11 @@ import Devices from "../views/Devices";
 import Servers from "../views/Servers";
 import AddServer from "../views/Servers/AddServer";
 import EditServer from "../views/Servers/EditServer";
+import UserManagement from "../pages/UserManagement";
+import ShiftMaster from "../pages/ShiftMaster";
+import StudentMaster from "../pages/StudentMaster.js";
+import Report from "../pages/Report";
+import BusMaster from "../pages/BusMaster";
 
 const authProtectedRoutes = [
   { path: "/dashboard", component: DashboardCrm },
@@ -102,6 +107,12 @@ const publicRoutes = [
   { path: "/auth-pass-change-basic", component: BasicPasswCreate },
   { path: "/auth-pass-change-cover", component: CoverPasswCreate },
   { path: "/auth-offline", component: Offlinepage },
+  { path: "/user-management", component: UserManagement },
+  { path: "/shift-master", component: ShiftMaster },
+  { path: "/student-master", component: StudentMaster },
+  { path: "/report", component: Report },
+  { path: "/bus-master", component: BusMaster },
+
 ];
 
 export { authProtectedRoutes, publicRoutes };
