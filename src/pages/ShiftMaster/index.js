@@ -49,61 +49,11 @@ const ShiftMaster = (props) => {
       <div className="page-content">
         <Container fluid>
           {/* <BreadCrumb title="CRM" pageTitle="Dashboards" /> */}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              marginRight: "2%",
-            }}
-          >
-            <Card
-              className="p-3 rounded-4 text-center"
-              style={{
-                width: "fit-content",
-                background: "#F4F4F4",
-                color: "#7A7A7A",
-              }}
-            >
-              <h5>TOTAL CUSTOMER</h5>
-              <h3>255</h3>
-            </Card>
-
-            <img
-              className="rounded-circle header-profile-user mt-3"
-              src={avatar1}
-              alt="Header Avatar"
-              style={{ width: "65px", height: "60px" }}
-            />
-          </div>
 
           <div>
             <Row>
               <Colxx lg="12">
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    marginRight: "2%",
-                  }}
-                >
-                  <h3 style={{ color: "#7B7B7B" }}>
-                    *Customer list by number of days remaining.
-                  </h3>
-                  <button
-                    className="p-2 rounded-3"
-                    style={{
-                      background: "#617AFB",
-                      color: "#fff",
-                      border: "#617AFB",
-                    }}
-                    onClick={() => {
-                      setCreateModal(true);
-                    }}
-                  >
-                    <PlusCircle /> ADD CUSTOMER
-                  </button>
-                </div>
-                <Card className="rounded-4 mt-5 w-100 h-100">
+                <Card className="rounded-4 mt-4">
                   <ShiftMasterTable
                     customers={data}
                     // getCustomer={getCustomer}
@@ -112,12 +62,6 @@ const ShiftMaster = (props) => {
                   />
                 </Card>
               </Colxx>
-              {/* <Colxx lg="3">
-              <h3 style={{ color: "#7B7B7B" }}>*Customer Activities</h3>
-                <Card className="p-3 rounded-4 w-100 h-100 mt-5" style={{background: "#7A7A7A"}}>
-
-                </Card>
-              </Colxx> */}
             </Row>
           </div>
         </Container>

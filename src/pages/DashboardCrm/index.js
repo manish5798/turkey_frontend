@@ -85,6 +85,7 @@ const DashboardCrm = (props) => {
                     display: "flex",
                     justifyContent: "space-between",
                     marginRight: "2%",
+                    marginTop: "3%"
                   }}
                 >
                   <h3 style={{ color: "#7B7B7B" }}>
@@ -104,7 +105,7 @@ const DashboardCrm = (props) => {
                     <PlusCircle /> ADD CUSTOMER
                   </button>
                 </div>
-                <Card className="rounded-4 mt-5 w-100 h-100">
+                <Card className="rounded-4 mt-4">
                   <SuperAdminTable
                     customers={data}
                     // getCustomer={getCustomer}
@@ -114,8 +115,8 @@ const DashboardCrm = (props) => {
                 </Card>
               </Colxx>
               <Colxx lg="3">
-              <h3 style={{ color: "#7B7B7B" }}>*Customer Activities</h3>
-                <Card className="p-3 rounded-4 w-100 h-100 mt-5" style={{background: "#7A7A7A"}}>
+              <h3 style={{ color: "#7B7B7B", marginTop: "9%" }}>*Customer Activities</h3>
+                <Card className="p-3 rounded-4 w-100 h-100 mt-4" style={{background: "#F3F3F3"}}>
 
                 </Card>
               </Colxx>

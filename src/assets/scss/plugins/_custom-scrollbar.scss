@@ -46,7 +46,8 @@
   padding: 0;
   margin: 0;
   -webkit-overflow-scrolling: touch;
-  background: #7a7a7a;
+  // background: #7a7a7a;
+  // color: #fff;
 }
 
 .simplebar-content-wrapper {
@@ -62,6 +63,8 @@
   max-height: 100%; /* Needed for vertical scroll to trigger */
   scrollbar-width: none;
   padding: 0px !important;
+  color: black;
+background: #7a7a7a;
 }
 
 .simplebar-content-wrapper::-webkit-scrollbar,

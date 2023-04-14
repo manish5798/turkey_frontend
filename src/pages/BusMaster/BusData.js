@@ -1,21 +1,24 @@
 const data = [
     {
-      company_name: "Wells Fargo",
-      authorized_name: "Jerome Bell ",
-      package: " Mini Keg ",
-      remaining_months: " 1 ",
+      vehicle_license: "GJ12KH5521",
+      driver_name: "Jerome Bell ",
+      vendor_name: " company ",
+      driver_profile: "",
+      phone_number: " 985 555-0128 ",
     },
     {
-      company_name: "Centene",
-      authorized_name: "Jerome Bell ",
-      package: " Case ",
-      remaining_months: " 3 ",
+      vehicle_license: "GJ12KH5521",
+      driver_name: "Jerome Bell ",
+      vendor_name: " company ",
+      driver_profile: "",
+      phone_number: " 985 555-0128 ",
     },
     {
-      company_name: "Microsoft",
-      authorized_name: "Savannah Nguyen ",
-      package: " Case ",
-      remaining_months: " 2 ",
+      vehicle_license: "GJ12KH5521",
+      driver_name: "Jerome Bell ",
+      vendor_name: " company ",
+      driver_profile: "",
+      phone_number: " 985 555-0128 ",
     },
   ];
   

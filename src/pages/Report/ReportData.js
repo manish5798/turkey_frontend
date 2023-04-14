@@ -1,21 +1,21 @@
 const data = [
     {
-      company_name: "Wells Fargo",
-      authorized_name: "Jerome Bell ",
-      package: " Mini Keg ",
-      remaining_months: " 1 ",
+      student_name: "Ronald Richards",
+      parents_name: "Ronald Richards",
+      picked: "Picked up",
+      date_time: "15, March 2023 / 12:00 PM",
     },
     {
-      company_name: "Centene",
-      authorized_name: "Jerome Bell ",
-      package: " Case ",
-      remaining_months: " 3 ",
+      student_name: "Ronald Richards",
+      parents_name: "Ronald Richards",
+      picked: "Not Picked up",
+      date_time: "15, March 2023 / 12:00 PM",
     },
     {
-      company_name: "Microsoft",
-      authorized_name: "Savannah Nguyen ",
-      package: " Case ",
-      remaining_months: " 2 ",
+      student_name: "Ronald Richards",
+      parents_name: "Ronald Richards",
+      picked: "Arrived",
+      date_time: "15, March 2023 / 12:00 PM",
     },
   ];
   

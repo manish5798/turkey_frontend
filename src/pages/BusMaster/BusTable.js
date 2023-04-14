@@ -22,9 +22,26 @@ const BusTable = (props) => {
     setChecked(val);
   };
 
+  const tableCustomStyles = {
+    headRow: {
+      style: {
+        color:'#fff',
+        backgroundColor: '#7A7A7A'
+      },
+    },
+    rows: {
+      style: {
+        color: "#7a7a7a",
+        backgroundColor: "#f3f3f3"
+      },
+    }
+  }
+
+
   return (
     <>
       <DataTable
+      customStyles={tableCustomStyles}
         columns={[
           {
             name: (
@@ -35,7 +52,7 @@ const BusTable = (props) => {
                 Vehicle License Plate No.
               </span>
             ),
-            selector: (row) => row.company_name,
+            selector: (row) => row.vehicle_license,
             sortable: true,
           },
           {
@@ -47,7 +64,7 @@ const BusTable = (props) => {
                 Driver Name
               </span>
             ),
-            selector: (row) => row.authorized_name,
+            selector: (row) => row.driver_name,
             sortable: true,
           },
           {
@@ -59,7 +76,7 @@ const BusTable = (props) => {
                 Vendor Name
               </span>
             ),
-            selector: (row) => row.package,
+            selector: (row) => row.vendor_name,
             sortable: true,
           },
           {
@@ -71,7 +88,7 @@ const BusTable = (props) => {
                 Driver Profile
               </span>
             ),
-            selector: (row) => row.remaining_months,
+            selector: (row) => row.driver_profile,
             sortable: true,
           },
           {
@@ -83,7 +100,7 @@ const BusTable = (props) => {
                 Phone Number
               </span>
             ),
-            selector: (row) => row.remaining_months,
+            selector: (row) => row.phone_number,
             sortable: true,
           },
           {

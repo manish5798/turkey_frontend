@@ -15,6 +15,8 @@ import data from "./BusData.js";
 import apiAuth from "../../helpers/ApiAuth";
 import NotificationManager from "../../Components/Common/NotificationManager";
 import BusTable from "./BusTable";
+import Sidebar from "../../Layouts/Sidebar";
+import TwoColumnLayout from "../../Layouts/TwoColumnLayout";
 
 const BusMaster = (props) => {
   document.title = "CRM Dashboard";
@@ -49,7 +51,7 @@ const BusMaster = (props) => {
       <div className="page-content">
         <Container fluid>
           {/* <BreadCrumb title="CRM" pageTitle="Dashboards" /> */}
-          <div
+          {/* <div
             style={{
               display: "flex",
               justifyContent: "space-between",
@@ -74,16 +76,15 @@ const BusMaster = (props) => {
               alt="Header Avatar"
               style={{ width: "65px", height: "60px" }}
             />
-          </div>
+          </div> */}
 
           <div>
             <Row>
               <Colxx lg="12">
                 <div
                   style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    marginRight: "2%",
+                    marginTop: "3%",
+                    marginLeft: "85%",
                   }}
                 >
                   <button
@@ -100,7 +101,7 @@ const BusMaster = (props) => {
                     <PlusCircle /> ADD Driver
                   </button>
                 </div>
-                <Card className="rounded-4 mt-5 w-100 h-100">
+                <Card className="rounded-4 mt-4">
                   <BusTable
                     customers={data}
                     // getCustomer={getCustomer}
@@ -109,12 +110,6 @@ const BusMaster = (props) => {
                   />
                 </Card>
               </Colxx>
-              {/* <Colxx lg="3">
-              <h3 style={{ color: "#7B7B7B" }}>*Customer Activities</h3>
-                <Card className="p-3 rounded-4 w-100 h-100 mt-5" style={{background: "#7A7A7A"}}>
-
-                </Card>
-              </Colxx> */}
             </Row>
           </div>
         </Container>

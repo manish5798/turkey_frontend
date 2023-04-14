@@ -3,9 +3,9 @@
 :root{
 
   // body
-  --#{$variable-prefix}body-bg : #{$body-bg};
-  --#{$variable-prefix}body-color: #{$body-color};
-  --#{$variable-prefix}body-color-rgb: #{to-rgb($body-color)};
+  --#{$variable-prefix}body-bg : #fff;
+  --#{$variable-prefix}body-color: #fff;
+  --#{$variable-prefix}body-color-rgb: #fff;
 
     //vertical light
   --#{$variable-prefix}vertical-menu-bg:                      #{$white};

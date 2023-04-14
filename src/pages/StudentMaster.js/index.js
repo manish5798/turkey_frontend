@@ -9,13 +9,14 @@ import {
 } from "reactstrap";
 import BreadCrumb from "../../Components/Common/BreadCrumb";
 import avatar1 from "../../assets/images/users/user-dummy-img.jpg";
-import { Plus, PlusCircle } from "react-bootstrap-icons";
+import { EnvelopeAtFill, EnvelopeFill, File, Plus, PlusCircle } from "react-bootstrap-icons";
 import { Colxx } from "../../Components/Common/CustomBootstrap";
 import data from "./StudentData.js";
 import apiAuth from "../../helpers/ApiAuth";
 import NotificationManager from "../../Components/Common/NotificationManager";
 import StudentTable from "./StudentTable";
 import AddStudent from "./AddStudent";
+import { FilePlusFill } from "react-bootstrap-icons";
 
 const StudentMaster = (props) => {
   document.title = "CRM Dashboard";
@@ -50,32 +51,6 @@ const StudentMaster = (props) => {
       <div className="page-content">
         <Container fluid>
           {/* <BreadCrumb title="CRM" pageTitle="Dashboards" /> */}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              marginRight: "2%",
-            }}
-          >
-            <Card
-              className="p-3 rounded-4 text-center"
-              style={{
-                width: "fit-content",
-                background: "#F4F4F4",
-                color: "#7A7A7A",
-              }}
-            >
-              <h5>TOTAL CUSTOMER</h5>
-              <h3>255</h3>
-            </Card>
-
-            <img
-              className="rounded-circle header-profile-user mt-3"
-              src={avatar1}
-              alt="Header Avatar"
-              style={{ width: "65px", height: "60px" }}
-            />
-          </div>
 
           <div>
             <Row>
@@ -87,13 +62,22 @@ const StudentMaster = (props) => {
                     marginRight: "2%",
                   }}
                 >
-                  <h3 style={{ color: "#7B7B7B" }}>
-                    *Customer list by number of days remaining.
-                  </h3>
+                  <div className="search-sm d-inline-block float-md-left mr-1 mb-1 align-top" style={{width: "80%", background: "#F3F3F3"}}>
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    style={{ background: "#F3F3F3", color: "#7A7A7A"}}
+                    // value={this.props.filter}
+                    className="form-control"
+                    // onChange={(text) => {
+                    //   this.props.filter_func(text.target.value);
+                    // }}
+                  />
+                </div>
                   <button
                     className="p-2 rounded-3"
                     style={{
-                      background: "#617AFB",
+                      background: "#7A7A7A",
                       color: "#fff",
                       border: "#617AFB",
                     }}
@@ -101,10 +85,24 @@ const StudentMaster = (props) => {
                       setCreateModal(true);
                     }}
                   >
-                    <PlusCircle /> ADD CUSTOMER
+                    <EnvelopeFill /> Send Email
+                  </button>
+
+                  <button
+                    className="p-2 rounded-3"
+                    style={{
+                      background: "#7A7A7A",
+                      color: "#fff",
+                      border: "#617AFB",
+                    }}
+                    onClick={() => {
+                      setCreateModal(true);
+                    }}
+                  >
+                    <FilePlusFill /> Import
                   </button>
                 </div>
-                <Card className="rounded-4 mt-5 w-100 h-100">
+                <Card className="rounded-4 mt-4">
                   <StudentTable
                     customers={data}
                     // getCustomer={getCustomer}

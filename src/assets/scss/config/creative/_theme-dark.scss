@@ -32,9 +32,9 @@
   }
 
   // body
-  --#{$variable-prefix}body-bg :  #{$gray-100};
-  --#{$variable-prefix}body-color: #{$gray-700};
-  --#{$variable-prefix}body-color-rgb: #{to-rgb($gray-700)};
+  --#{$variable-prefix}body-bg :  #fff;
+  --#{$variable-prefix}body-color: #fff;
+  --#{$variable-prefix}body-color-rgb: #fff;
   
 
   //vertical light

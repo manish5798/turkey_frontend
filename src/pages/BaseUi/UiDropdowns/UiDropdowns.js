@@ -58,7 +58,7 @@ const UiDropdowns = () => {
                             <Card>
                                 <PreviewCardHeader title="Single Button Dropdown" />
 
-                                <CardBody>                                    
+                                <CardBody>
                                     <div className="live-preview">
                                         <div className="d-flex flex-wrap gap-3">
 

@@ -22,9 +22,25 @@ const ShiftMasterTable = (props) => {
     setChecked(val);
   };
 
+  const tableCustomStyles = {
+    headRow: {
+      style: {
+        color:'#fff',
+        backgroundColor: '#7A7A7A'
+      },
+    },
+    rows: {
+      style: {
+        color: "#7a7a7a",
+        backgroundColor: "#f3f3f3"
+      },
+    }
+  }
+
   return (
     <>
       <DataTable
+      customStyles={tableCustomStyles}
         columns={[
           {
             name: (
@@ -32,10 +48,10 @@ const ShiftMasterTable = (props) => {
                 className="font-weight-bold fs-13"
                 style={{ fontSize: "18px", fontWeight: 700 }}
               >
-                Company Name
+                Time
               </span>
             ),
-            selector: (row) => row.company_name,
+            selector: (row) => row.time,
             sortable: true,
           },
           {
@@ -44,10 +60,10 @@ const ShiftMasterTable = (props) => {
                 className="font-weight-bold fs-13"
                 style={{ fontSize: "18px", fontWeight: 700 }}
               >
-                Authorized Name
+                Shift Type
               </span>
             ),
-            selector: (row) => row.authorized_name,
+            selector: (row) => row.shift_type,
             sortable: true,
           },
           {
@@ -56,10 +72,10 @@ const ShiftMasterTable = (props) => {
                 className="font-weight-bold fs-13"
                 style={{ fontSize: "18px", fontWeight: 700 }}
               >
-                Package
+                Shift Link
               </span>
             ),
-            selector: (row) => row.package,
+            selector: (row) => row.shift_link,
             sortable: true,
           },
           {
@@ -68,10 +84,10 @@ const ShiftMasterTable = (props) => {
                 className="font-weight-bold fs-13"
                 style={{ fontSize: "18px", fontWeight: 700 }}
               >
-                No. of remaining months
+                Cut off
               </span>
             ),
-            selector: (row) => row.remaining_months,
+            selector: (row) => row.cut_off,
             sortable: true,
           },
           {
@@ -80,22 +96,11 @@ const ShiftMasterTable = (props) => {
                 className="font-weight-bold fs-13"
                 style={{ fontSize: "18px", fontWeight: 700 }}
               >
-                Status
+                Buffer Time
               </span>
             ),
-            selector: (row) => row,
-            cell: (value) => {
-              return (
-                // <button
-                //       className="edit-item-btn"
-                //       onClick={() => {
-                //         setSelectedCustomer(value);
-                //         setEditModal(true);
-                //       }}
-                //     >
-                <Switch onChange={handleChange} checked={checked} />
-              );
-            },
+            selector: (row) => row.buffer_time,
+            sortable: true,
           },
           {
             name: (

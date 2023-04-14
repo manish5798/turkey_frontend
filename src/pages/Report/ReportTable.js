@@ -22,9 +22,25 @@ const ReportTable = (props) => {
     setChecked(val);
   };
 
+  const tableCustomStyles = {
+    headRow: {
+      style: {
+        color:'#fff',
+        backgroundColor: '#7A7A7A'
+      },
+    },
+    rows: {
+      style: {
+        color: "#7a7a7a",
+        backgroundColor: "#f3f3f3"
+      },
+    }
+  }
+
   return (
     <>
       <DataTable
+       customStyles={tableCustomStyles}
         columns={[
           {
             name: (
@@ -32,10 +48,10 @@ const ReportTable = (props) => {
                 className="font-weight-bold fs-13"
                 style={{ fontSize: "18px", fontWeight: 700 }}
               >
-                Company Name
+                Student Name
               </span>
             ),
-            selector: (row) => row.company_name,
+            selector: (row) => row.student_name,
             sortable: true,
           },
           {
@@ -44,10 +60,10 @@ const ReportTable = (props) => {
                 className="font-weight-bold fs-13"
                 style={{ fontSize: "18px", fontWeight: 700 }}
               >
-                Authorized Name
+                Parents Name
               </span>
             ),
-            selector: (row) => row.authorized_name,
+            selector: (row) => row.parents_name,
             sortable: true,
           },
           {
@@ -56,10 +72,10 @@ const ReportTable = (props) => {
                 className="font-weight-bold fs-13"
                 style={{ fontSize: "18px", fontWeight: 700 }}
               >
-                Package
+                Picked Up / Not Picked
               </span>
             ),
-            selector: (row) => row.package,
+            selector: (row) => row.picked,
             sortable: true,
           },
           {
@@ -68,116 +84,17 @@ const ReportTable = (props) => {
                 className="font-weight-bold fs-13"
                 style={{ fontSize: "18px", fontWeight: 700 }}
               >
-                No. of remaining months
+                Date & Time
               </span>
             ),
-            selector: (row) => row.remaining_months,
+            selector: (row) => row.date_time,
             sortable: true,
-          },
-          {
-            name: (
-              <span
-                className="font-weight-bold fs-13"
-                style={{ fontSize: "18px", fontWeight: 700 }}
-              >
-                Status
-              </span>
-            ),
-            selector: (row) => row,
-            cell: (value) => {
-              return (
-                // <button
-                //       className="edit-item-btn"
-                //       onClick={() => {
-                //         setSelectedCustomer(value);
-                //         setEditModal(true);
-                //       }}
-                //     >
-                <Switch onChange={handleChange} checked={checked} />
-              );
-            },
-          },
-          {
-            name: (
-              <span
-                className="font-weight-bold fs-13"
-                style={{ fontSize: "18px", fontWeight: 700 }}
-              >
-                Edit
-              </span>
-            ),
-            selector: (row) => row,
-            cell: (value) => {
-              return (
-                <button
-                  className="edit-item-btn"
-                  onClick={() => {
-                    setSelectedCustomer(value);
-                    setEditModal(true);
-                  }}
-                >
-                  {/* <i className="ri-pencil-fill align-bottom me-2 text-muted"></i> */}
-                  <PencilSquare style-={{ color: "#fff" }} />
-                </button>
-              );
-            },
-          },
-          {
-            name: (
-              <span
-                className="font-weight-bold fs-13"
-                style={{ fontSize: "18px", fontWeight: 700 }}
-              >
-                Delete
-              </span>
-            ),
-            selector: (row) => row,
-            cell: (value) => {
-              return (
-                <button
-                  className="edit-item-btn"
-                  onClick={() => props.deleteCustomer(value.id)}
-                >
-                  {/* <i className="ri-pencil-fill align-bottom me-2 text-muted"></i> */}
-                  <TrashFill />
-                </button>
-              );
-            },
           },
         ]}
         data={props.customers}
         pagination={props.customers.length > 10 ? true : false}
       />
 
-      {/* <Modal
-        id="signupModals"
-        tabIndex="-1"
-        className="modal-lg"
-        isOpen={editModal}
-        toggle={() => {
-          setEditModal((prev) => !prev);
-        }}
-      >
-        <ModalHeader
-          className="p-3"
-          toggle={() => {
-            setEditModal((prev) => !prev);
-          }}
-        >
-          Edit Customer
-        </ModalHeader>
-        <ModalBody>
-          <EditStudent
-            closeAddPopup={() => {
-              setEditModal(false);
-              setSelectedCustomer(null);
-              // props.getCustomers();
-            }}
-            customerData={selectedCustomer}
-            history={props.history}
-          />
-        </ModalBody>
-      </Modal> */}
     </>
   );
 };

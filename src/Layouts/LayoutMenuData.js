@@ -5,7 +5,13 @@ const Navdata = () => {
   const history = useHistory();
   //state data
   const [isDashboard, setIsDashboard] = useState(false);
-  const [isSettings, setIsSettings] = useState(false);
+  const [isRouteManager, setIsRouteManager] = useState(false);
+  const [isBusMaster, setIsBusMaster] = useState(false);
+  const [isStudentMaster, setIsStudentMaster] = useState(false);
+  const [isShiftMaster, setIsShiftMaster] = useState(false);
+  const [isUserManagement, setisUserManagement] = useState(false);
+  const [isReport, setIsReport] = useState(false);
+  const [isMyBilling, setIsMyBilling] = useState(false);
   const [iscurrentState, setIscurrentState] = useState("Dashboard");
 
   function updateIconSidebar(e) {
@@ -27,16 +33,45 @@ const Navdata = () => {
     if (iscurrentState !== "Dashboard") {
       setIsDashboard(false);
     }
+    if (iscurrentState !== "RouteManager") {
+      setIsRouteManager(false);
+    }
 
-    if (iscurrentState !== "Settings") {
-      setIsSettings(false);
+    if (iscurrentState !== "BusMaster") {
+      setIsBusMaster(false);
+    }
+    if (iscurrentState !== "StudentMaster") {
+      setIsStudentMaster(false);
+    }
+    if (iscurrentState !== "ShiftMaster") {
+      setIsShiftMaster(false);
+    }
+    if (iscurrentState !== "UserManagement") {
+      setisUserManagement(false);
+    }
+    if (iscurrentState !== "Report") {
+      setIsReport(false);
+    }
+    if (iscurrentState !== "MyBilling") {
+      setIsMyBilling(false);
     }
 
     if (iscurrentState === "Widgets") {
       history.push("/widgets");
       document.body.classList.add("twocolumn-panel");
     }
-  }, [history, iscurrentState, isDashboard, isSettings]);
+  }, [
+    history,
+    iscurrentState,
+    isDashboard,
+    isRouteManager,
+    isBusMaster,
+    isStudentMaster,
+    isShiftMaster,
+    isUserManagement,
+    isReport,
+    isMyBilling,
+  ]);
 
   const menuItems = [
     {
@@ -45,79 +80,66 @@ const Navdata = () => {
       icon: "ri-dashboard-2-line",
       link: "/dashboard",
       stateVariables: isDashboard,
-      // click: function (e) {
-      //   e.preventDefault();
-      //   setIsDashboard(!isDashboard);
-      //   setIscurrentState("Dashboard");
-      //   updateIconSidebar(e);
-      // },
-      // subItems: [
-      //   {
-      //     id: "crm",
-      //     label: "CRM",
-      //     link: "/dashboard",
-      //     parentId: "dashboard",
-      //   },
-      // ],
+      roles: ["superadmin", "admin", "user"],
+    },
+    {
+      id: "route-manager",
+      label: "Route Manager",
+      icon: "ri-team-line",
+      link: "/route-manager",
+      stateVariables: isRouteManager,
+      roles: ["superadmin", "admin", "user"],
+    },
+    {
+      id: "bus-master",
+      label: "Bus Master",
+      icon: "ri-team-line",
+      link: "/bus-master",
+      stateVariables: isBusMaster,
+      roles: ["superadmin", "admin", "user"],
+    },
+    {
+      id: "student-master",
+      label: "Student Master",
+      icon: "ri-customer-service-line",
+      link: "/student-master",
+      stateVariables: isStudentMaster,
+      roles: ["superadmin", "admin", "user"],
+    },
+    {
+      id: "shift-master",
+      label: "Shift Master",
+      icon: "ri-folder-chart-line",
+      link: "/shift-master",
+      stateVariables: isShiftMaster,
+      roles: ["superadmin", "admin", "user"],
     },
 
     {
-      id: "customer",
-      label: "Customer",
-      icon: "ri-dashboard-2-line",
-      link: "/customer",
-    }
-    // {
-    //   id: "settings",
-    //   label: "Settings",
-    //   icon: "ri-settings-2-line",
-    //   link: "/#",
-    //   stateVariables: isSettings,
-    //   click: function (e) {
-    //     e.preventDefault();
-    //     setIsSettings(!isSettings);
-    //     setIscurrentState("Settings");
-    //     updateIconSidebar(e);
-    //   },
-    //   subItems: [
-    //     {
-    //       id: "company",
-    //       label: "Companies",
-    //       link: "/companies",
-    //       parentId: "settings",
-    //     },
-    //     {
-    //       id: "users",
-    //       label: "Users",
-    //       link: "/users",
-    //       parentId: "settings",
-    //     },
-    //     {
-    //       id: "groups",
-    //       label: "Groups",
-    //       link: "/groups",
-    //       parentId: "settings",
-    //     },
-    //     {
-    //       id: "servers",
-    //       label: "Servers",
-    //       link: "/servers",
-    //       parentId: "settings",
-    //     },
-    //     {
-    //       id: "locations",
-    //       label: "Locations",
-    //       link: "/locations",
-    //       parentId: "settings",
-    //     },
-    //     {
-    //       id: "devices",
-    //       label: "Devices",
-    //       link: "/devices",
-    //       parentId: "settings",
-    //     },
-    //   ],
-    // },
+      id: "user-management",
+      label: "User Management",
+      icon: "ri-file-user-line",
+      link: "/user-management",
+      stateVariables: isUserManagement,
+      roles: ["superadmin", "admin"],
+    },
+    {
+      id: "report",
+      label: "Report",
+      icon: "ri-coupon-5-line",
+      link: "/report",
+      stateVariables: isReport,
+      roles: ["superadmin", "admin"],
+    },
+
+    {
+      id: "my-billing",
+      label: "My Billing",
+      icon: "ri-secure-payment-line",
+      link: "/my-billing",
+      stateVariables: isMyBilling,
+      roles: ["superadmin", "admin"],
+    },
   ];
   return <React.Fragment>{menuItems}</React.Fragment>;
 };

@@ -1,21 +1,21 @@
 const data = [
     {
-      company_name: "Wells Fargo",
-      authorized_name: "Jerome Bell ",
-      package: " Mini Keg ",
-      remaining_months: " 1 ",
+      email: "jackson.graham@example.com",
+      full_name: "Ronald Richards",
+      phone: "070 5472 6467 ",
+      role: "Driver",
     },
     {
-      company_name: "Centene",
-      authorized_name: "Jerome Bell ",
-      package: " Case ",
-      remaining_months: " 3 ",
+      email: "jackson.graham@example.com",
+      full_name: "Ronald Richards",
+      phone: "070 5472 6467 ",
+      role: "Admin",
     },
     {
-      company_name: "Microsoft",
-      authorized_name: "Savannah Nguyen ",
-      package: " Case ",
-      remaining_months: " 2 ",
+      email: "jackson.graham@example.com",
+      full_name: "Ronald Richards",
+      phone: "070 5472 6467 ",
+      role: "Parent",
     },
   ];
   

@@ -22,9 +22,26 @@ const StudentTable = (props) => {
     setChecked(val);
   };
 
+  const tableCustomStyles = {
+    headRow: {
+      style: {
+        color:'#fff',
+        backgroundColor: '#7A7A7A'
+      },
+    },
+    rows: {
+      style: {
+        color: "#7a7a7a",
+        backgroundColor: "#f3f3f3"
+      },
+    }
+  }
+
+
   return (
     <>
       <DataTable
+      customStyles={tableCustomStyles}
         columns={[
           {
             name: (
@@ -32,10 +49,10 @@ const StudentTable = (props) => {
                 className="font-weight-bold fs-13"
                 style={{ fontSize: "18px", fontWeight: 700 }}
               >
-                Company Name
+                Student Name
               </span>
             ),
-            selector: (row) => row.company_name,
+            selector: (row) => row.student_name,
             sortable: true,
           },
           {
@@ -44,10 +61,10 @@ const StudentTable = (props) => {
                 className="font-weight-bold fs-13"
                 style={{ fontSize: "18px", fontWeight: 700 }}
               >
-                Authorized Name
+                Father's Name
               </span>
             ),
-            selector: (row) => row.authorized_name,
+            selector: (row) => row.father_name,
             sortable: true,
           },
           {
@@ -56,10 +73,10 @@ const StudentTable = (props) => {
                 className="font-weight-bold fs-13"
                 style={{ fontSize: "18px", fontWeight: 700 }}
               >
-                Package
+                Mother's Name
               </span>
             ),
-            selector: (row) => row.package,
+            selector: (row) => row.mother_name,
             sortable: true,
           },
           {
@@ -68,10 +85,46 @@ const StudentTable = (props) => {
                 className="font-weight-bold fs-13"
                 style={{ fontSize: "18px", fontWeight: 700 }}
               >
-                No. of remaining months
+                Phone Number
               </span>
             ),
-            selector: (row) => row.remaining_months,
+            selector: (row) => row.phone_number,
+            sortable: true,
+          },
+          {
+            name: (
+              <span
+                className="font-weight-bold fs-13"
+                style={{ fontSize: "18px", fontWeight: 700 }}
+              >
+                Gender
+              </span>
+            ),
+            selector: (row) => row.gender,
+            sortable: true,
+          },
+          {
+            name: (
+              <span
+                className="font-weight-bold fs-13"
+                style={{ fontSize: "18px", fontWeight: 700 }}
+              >
+                Address
+              </span>
+            ),
+            selector: (row) => row.address,
+            sortable: true,
+          },
+          {
+            name: (
+              <span
+                className="font-weight-bold fs-13"
+                style={{ fontSize: "18px", fontWeight: 700 }}
+              >
+                Email
+              </span>
+            ),
+            selector: (row) => row.email,
             sortable: true,
           },
           {

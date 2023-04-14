@@ -22,9 +22,25 @@ const SuperAdminTable = (props) => {
     setChecked(val);
   };
 
+  const tableCustomStyles = {
+    headRow: {
+      style: {
+        color:'#fff',
+        backgroundColor: '#7A7A7A'
+      },
+    },
+    rows: {
+      style: {
+        color: "#7a7a7a",
+        backgroundColor: "#f3f3f3"
+      },
+    }
+  }
+
   return (
     <>
       <DataTable
+       customStyles={tableCustomStyles}
         columns={[
           {
             name: (

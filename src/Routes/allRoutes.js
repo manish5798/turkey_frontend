@@ -51,6 +51,9 @@ import ShiftMaster from "../pages/ShiftMaster";
 import StudentMaster from "../pages/StudentMaster.js";
 import Report from "../pages/Report";
 import BusMaster from "../pages/BusMaster";
+import SchoolWebPanel from "../pages/SchoolWebPanel";
+import MyBilling from "../pages/MyBilling";
+import RouteManager from "../pages/RouteManager";
 
 const authProtectedRoutes = [
   { path: "/dashboard", component: DashboardCrm },
@@ -112,6 +115,9 @@ const publicRoutes = [
   { path: "/student-master", component: StudentMaster },
   { path: "/report", component: Report },
   { path: "/bus-master", component: BusMaster },
+  { path: "/school-web-panel", component: SchoolWebPanel },
+  { path: "/my-billing", component: MyBilling },
+  { path: "/route-manager", component: RouteManager },
 
 ];
 

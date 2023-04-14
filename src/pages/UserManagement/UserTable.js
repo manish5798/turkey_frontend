@@ -7,7 +7,7 @@ import {
   UncontrolledDropdown,
 } from "reactstrap";
 import { Alert, Modal, ModalBody, ModalHeader } from "reactstrap";
-import { SkipEndBtnFill } from "react-bootstrap-icons";
+import { ChatRightFill, CheckCircleFill, SkipEndBtnFill } from "react-bootstrap-icons";
 import { PencilSquare } from "react-bootstrap-icons";
 import { TrashFill } from "react-bootstrap-icons";
 import Switch from "react-switch";
@@ -22,9 +22,26 @@ const UserTable = (props) => {
     setChecked(val);
   };
 
+  const tableCustomStyles = {
+    headRow: {
+      style: {
+        color:'#fff',
+        backgroundColor: '#7A7A7A'
+      },
+    },
+    rows: {
+      style: {
+        color: "#7a7a7a",
+        backgroundColor: "#f3f3f3"
+      },
+    }
+  }
+
+
   return (
     <>
       <DataTable
+      customStyles={tableCustomStyles}
         columns={[
           {
             name: (
@@ -32,10 +49,10 @@ const UserTable = (props) => {
                 className="font-weight-bold fs-13"
                 style={{ fontSize: "18px", fontWeight: 700 }}
               >
-                Company Name
+                Email
               </span>
             ),
-            selector: (row) => row.company_name,
+            selector: (row) => row.email,
             sortable: true,
           },
           {
@@ -44,10 +61,10 @@ const UserTable = (props) => {
                 className="font-weight-bold fs-13"
                 style={{ fontSize: "18px", fontWeight: 700 }}
               >
-                Authorized Name
+                Full Name
               </span>
             ),
-            selector: (row) => row.authorized_name,
+            selector: (row) => row.full_name,
             sortable: true,
           },
           {
@@ -56,10 +73,10 @@ const UserTable = (props) => {
                 className="font-weight-bold fs-13"
                 style={{ fontSize: "18px", fontWeight: 700 }}
               >
-                Package
+                Phone No.
               </span>
             ),
-            selector: (row) => row.package,
+            selector: (row) => row.phone,
             sortable: true,
           },
           {
@@ -68,10 +85,10 @@ const UserTable = (props) => {
                 className="font-weight-bold fs-13"
                 style={{ fontSize: "18px", fontWeight: 700 }}
               >
-                No. of remaining months
+                Role
               </span>
             ),
-            selector: (row) => row.remaining_months,
+            selector: (row) => row.role,
             sortable: true,
           },
           {
@@ -80,20 +97,45 @@ const UserTable = (props) => {
                 className="font-weight-bold fs-13"
                 style={{ fontSize: "18px", fontWeight: 700 }}
               >
-                Status
+                Add
               </span>
             ),
             selector: (row) => row,
             cell: (value) => {
               return (
                 // <button
-                //       className="edit-item-btn"
-                //       onClick={() => {
-                //         setSelectedCustomer(value);
-                //         setEditModal(true);
-                //       }}
-                //     >
-                <Switch onChange={handleChange} checked={checked} />
+                //   className="edit-item-btn"
+                //   onClick={() => {
+                //     setSelectedCustomer(value);
+                //     setEditModal(true);
+                //   }}
+                // >
+                  <CheckCircleFill style={{ color: "#000" }} />
+                // </button>
+              );
+            },
+          },
+          {
+            name: (
+              <span
+                className="font-weight-bold fs-13"
+                style={{ fontSize: "18px", fontWeight: 700 }}
+              >
+                View
+              </span>
+            ),
+            selector: (row) => row,
+            cell: (value) => {
+              return (
+                // <button
+                //   className="edit-item-btn"
+                //   onClick={() => {
+                //     setSelectedCustomer(value);
+                //     setEditModal(true);
+                //   }}
+                // >
+                  <CheckCircleFill style={{ color: "#000" }} />
+                // </button>
               );
             },
           },
@@ -109,16 +151,15 @@ const UserTable = (props) => {
             selector: (row) => row,
             cell: (value) => {
               return (
-                <button
-                  className="edit-item-btn"
-                  onClick={() => {
-                    setSelectedCustomer(value);
-                    setEditModal(true);
-                  }}
-                >
-                  {/* <i className="ri-pencil-fill align-bottom me-2 text-muted"></i> */}
-                  <PencilSquare style-={{ color: "#fff" }} />
-                </button>
+                // <button
+                //   className="edit-item-btn"
+                //   onClick={() => {
+                //     setSelectedCustomer(value);
+                //     setEditModal(true);
+                //   }}
+                // >
+                  <CheckCircleFill style={{ color: "#000" }} />
+                // </button>
               );
             },
           },
@@ -137,8 +178,8 @@ const UserTable = (props) => {
                 <button
                   className="edit-item-btn"
                   onClick={() => props.deleteCustomer(value.id)}
+                  style={{background: "#7a7a7a", color: "#fff"}}
                 >
-                  {/* <i className="ri-pencil-fill align-bottom me-2 text-muted"></i> */}
                   <TrashFill />
                 </button>
               );
